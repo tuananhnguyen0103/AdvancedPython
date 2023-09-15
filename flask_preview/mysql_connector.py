@@ -45,19 +45,19 @@ def get_hocsinh():
 
 def create_table(table_name):
     cursor.execute('''
-    CREATE TABLE Table_test (
+    CREATE TABLE {0} (
     Table_test_col_1  INT AUTO_INCREMENT PRIMARY KEY,
     Table_test_col_2  VARCHAR(255) NOT NULL,
     Table_test_col_3  TEXT );
-''')
+'''.format(table_name))
     
 def inserts_table_test(table_name, values):
-    
-    cursor.execute('''
+    sql_excute = '''
     INSERT INTO Table_test (Table_test_col_2, Table_test_col_3) 
     VALUES
-    ('{0}', '{1}');
-'''.format(values[0],values[1]))
+    ('{0}', '{1}');'''.format(values[0],values[1])
+    
+    cursor.execute(sql_excute)
     
 def get_table_test():
         # Khởi tạo câu truy vấn với bảng món ăn bằng con trỏ (cursor)

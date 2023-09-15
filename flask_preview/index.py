@@ -18,18 +18,25 @@ def api_data():
 
 @app.route('/api/data/create/table', methods=['Post']) 
 def api_create():
-    table_name = request.form.get('table_name')   
-    mysql_connector.create_table(table_name)
-    return ("Ok")
+    try:
+        table_name = request.form.get('table_name')   
+        mysql_connector.create_table(table_name)
+        return ("Ok")
+    except:
+        return("Bảng đã được tạo")
 
 @app.route('/api/data/create/inserts_table_test', methods=['Post']) 
 def api_create_table_test():
-    table_name = request.form.get('table_name')   
-    value_1 = request.form.get('values_1')   
-    value_2 = request.form.get('values_2')
-    values = [value_1,value_2]
-    mysql_connector.inserts_table_test(table_name,values)
-    return ("Ok")
+    try:
+        table_name = request.form.get('table_name')   
+        value_1 = request.form.get('value_1')   
+        value_2 = request.form.get('value_2')
+        values = [value_1,value_2]
+        # print(values)
+        mysql_connector.inserts_table_test(table_name,values)
+        return ("Thêm thành công")
+    except:
+        return("Có lỗi")
 
 @app.route('/api/data/table_test', methods=['GET'])
 def api_data_table_test():
