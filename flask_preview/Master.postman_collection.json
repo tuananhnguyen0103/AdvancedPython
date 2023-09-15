@@ -1,0 +1,43 @@
+{
+	"info": {
+		"_postman_id": "eecd1cd0-a3be-4a28-b429-ab2051c4cbdf",
+		"name": "Master",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "15407173",
+		"_collection_link": "https://gold-sunset-228574.postman.co/workspace/hello~2a5b4278-f6c3-47f0-ae6d-281a1a097f76/collection/15407173-eecd1cd0-a3be-4a28-b429-ab2051c4cbdf?action=share&source=collection_link&creator=15407173"
+	},
+	"item": [
+		{
+			"name": "GetHocsinh",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Create_Table_test",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Insert Table test",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get Table Test",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
